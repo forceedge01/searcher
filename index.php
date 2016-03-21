@@ -94,7 +94,7 @@
 		<?php foreach ($search as $index => $s): ?>
 			<div class="column">
 				<h3><?=$s['name']?></h3>
-				<iframe src="<?=$s['baseUrl']?>" id="<?=$s['name']?>Search"></iframe>
+				<iframe src="" id="<?=$s['name']?>Search"></iframe>
 			</div>
 		<?php endforeach ?>
 	</div>
