@@ -96,7 +96,7 @@
 	</div>
 	<div id="searchResult">
 		<?php foreach ($search as $index => $s): ?>
-			<div class="column">
+			<div class="column" style="width: <?=100/$defaultColumnsCount?>%">
 				<h3><?=$s['name']?></h3>
 				<iframe src="" id="<?=$s['name']?>Search"></iframe>
 			</div>
