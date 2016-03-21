@@ -1,4 +1,8 @@
 <?php
+	// Set the number of columns to display on page load.
+	$defaultColumnsCount = 2;
+
+	// The search engines to use.
 	$search = [
 		[
 			'name' => 'duckduckgo',
@@ -96,6 +100,11 @@
 				<h3><?=$s['name']?></h3>
 				<iframe src="" id="<?=$s['name']?>Search"></iframe>
 			</div>
+			<?php 
+				if ($index === $defaultColumnsCount-1) {
+					break;
+				}
+			?>
 		<?php endforeach ?>
 	</div>
 </body>
