@@ -5,13 +5,13 @@
 	// The search engines to use.
 	$search = [
 		[
-			'name' => 'duckduckgo',
-			'baseUrl' => 'https://duckduckgo.com',
-			'searchUrl' => 'https://duckduckgo.com/?q={searchTerm}&ia=videos'
-		], [
 			'name' => 'bing',
 			'baseUrl' => 'http://www.bing.com',
 			'searchUrl' => 'http://www.bing.com/search?q={searchTerm}'
+		], [
+			'name' => 'duckduckgo',
+			'baseUrl' => 'https://duckduckgo.com',
+			'searchUrl' => 'https://duckduckgo.com/?q={searchTerm}&ia=videos'
 		], [
 			'name' => 'dogpile',
 			'baseUrl' => 'http://www.dogpile.com',
