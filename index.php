@@ -100,11 +100,6 @@
 				<h3><?=$s['name']?></h3>
 				<iframe src="" id="<?=$s['name']?>Search"></iframe>
 			</div>
-			<?php 
-				if ($index === $defaultColumnsCount-1) {
-					break;
-				}
-			?>
 		<?php endforeach ?>
 	</div>
 </body>
