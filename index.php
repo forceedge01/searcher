@@ -89,7 +89,7 @@
 		<button id="go" tabindex="1">Go</button>
 		<select id="searchCount">
 			<?php for ($i = count($search); $i > 0; $i--): ?>
-				<option value="<?=$i?>"><?=$i?></option>
+				<option value="<?=$i?>" <?=($i == $defaultColumnsCount) ? 'selected=selected' : ''?>><?=$i?></option>
 			<?php endfor ?>
 		</select>
 		Per column
