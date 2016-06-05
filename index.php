@@ -45,42 +45,23 @@
 			min-height: 100%;
 			height: 100%;
 		}
+		input, button, select {
+			padding: 5px;
+		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script>
-		$(document).ready(function() {
-			setTimeout(function() {
-				$('input')[0].focus();
-			}, 1000);
-
-			// Search engines details populated in javascript.
-			var searchEngines = [
-				<?php foreach ($search as $s): ?>
-					[
-						'<?=$s["name"]?>',
-						'<?=$s["searchUrl"]?>'
-					],
-				<?php endforeach ?>
-			];
-
-			// On go, submit the query to both search engines.
-			$('#go').on('click', function() {
-				// Get the search term submitted.
-				var search = $('#searchTerm').val();
-				var filteredUrl = '';
-				var count = $('#searchCount').val();
-
-				// Reset width of columns.
-				$('.column').attr('style', 'width: ' + 100/count + '%;');
-
-				// Set the iframe urls.
-				for (property in searchEngines) {
-					filteredUrl = searchEngines[property][1].replace('{searchTerm}', search);
-					$('#' + searchEngines[property][0] + 'Search').attr('src', filteredUrl);
-				}
-			});
-		});
+		// Search engines details populated in javascript.
+		var searchEngines = [
+			<?php foreach ($search as $s): ?>
+				[
+					'<?=$s["name"]?>',
+					'<?=$s["searchUrl"]?>'
+				],
+			<?php endforeach ?>
+		];
 	</script>
+	<script src="script.js"></script>
 </head>
 <body>
 	<div id="searchbar">
