@@ -1,27 +1,37 @@
 <?php
-	// Set the number of columns to display on page load.
-	$defaultColumnsCount = 2;
+    // Set the number of columns to display on page load.
+    $defaultColumnsCount = 2;
 
-	// The search engines to use.
-	$search = [
-		[
-			'name' => 'bing',
-			'baseUrl' => 'http://www.bing.com',
-			'searchUrl' => 'http://www.bing.com/search?q={searchTerm}'
-		], [
-			'name' => 'duckduckgo',
-			'baseUrl' => 'https://duckduckgo.com',
-			'searchUrl' => 'https://duckduckgo.com/?q={searchTerm}&ia=videos'
-		], [
-			'name' => 'dogpile',
-			'baseUrl' => 'http://www.dogpile.com',
-			'searchUrl' => 'http://www.dogpile.com/search/web?q={searchTerm}'
-		], [
-			'name' => 'ask',
-			'baseUrl' => 'http://uk.ask.com',
-			'searchUrl' => 'http://uk.ask.com/web?q={searchTerm}'
-		]
-	];
+    // The search engines to use.
+    $search = [
+        [
+            'name' => 'bing',
+            'baseUrl' => 'http://www.bing.com',
+            'searchUrl' => 'http://www.bing.com/search?q={searchTerm}'
+        ], [
+            'name' => 'duckduckgo',
+            'baseUrl' => 'https://duckduckgo.com',
+            'searchUrl' => 'https://duckduckgo.com/?q={searchTerm}&ia=videos'
+        ], [
+            'name' => 'dogpile',
+            'baseUrl' => 'http://www.dogpile.com',
+            'searchUrl' => 'http://www.dogpile.com/search/web?q={searchTerm}'
+        ], [
+            'name' => 'ask',
+            'baseUrl' => 'http://uk.ask.com',
+            'searchUrl' => 'http://uk.ask.com/web?q={searchTerm}'
+        ]
+    ];
+
+    $external = [
+        'eBay' => 'https://ebay.co.uk',
+        'Amazon' => 'https://amazon.co.uk',
+        'Hotmail' => 'https://hotmail.com',
+        'easyFundraising' => 'https://easyfundraising.org.uk',
+        'Confluence' => 'https://easyfundraising.atlassian.net/wiki/#all-updates',
+        'JIRA' => 'https://easyfundraising.atlassian.net/secure/MyJiraHome.jspa',
+        'Bitbucket' => 'https://bitbucket.org/'
+    ];
 ?>
 
 <html>
@@ -48,6 +58,13 @@
 		input, button, select {
 			padding: 5px;
 		}
+		#external-links {
+            text-align: right;
+        }
+        #external-links a {
+            color: black;
+            padding: 5px;
+        }
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script>
@@ -64,6 +81,11 @@
 	<script src="script.js"></script>
 </head>
 <body>
+	<div id="external-links">
+        <?php foreach ($external as $name => $link): ?>
+            <a href="<?=$link?>" target="_blank"><?=$name?></a>
+        <?php endforeach ?>
+    </div>
 	<div id="searchbar">
 		<span>Search</span>
 		<input type="text" id="searchTerm"> 
