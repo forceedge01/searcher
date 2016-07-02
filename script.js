@@ -8,7 +8,7 @@ $(document).ready(function() {
 		'amazon:': 'https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={term}',
 		'ebay:': 'http://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2050601.m570.l1313.TR0.TRC0.H0.Xasdf.TRS0&_nkw={term}&_sacat=0',
 		'asda:': 'http://groceries.asda.com/search/{term}',
-		'direction:': 'https://www.google.co.uk/maps/dir/Abbey+Rd,+Birmingham+B23+7QQ,+UK/{term}/',
+		'destination:': 'https://www.google.co.uk/maps/dir/Abbey+Rd,+Birmingham+B23+7QQ,+UK/{term}/',
 		'imdb:': 'http://www.imdb.com/find?ref_=nv_sr_fn&q={term}&s=all'
 	};
 
