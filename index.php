@@ -89,7 +89,7 @@
 	<div id="searchbar">
 		<span>Search</span>
 		<input type="text" id="searchTerm"> 
-		<button id="go" tabindex="1">Go</button>
+		<button id="go" tabindex="1">Go</button> <a id="legend">I</a>
 		<select id="searchCount">
 			<?php for ($i = count($search); $i > 0; $i--): ?>
 				<option value="<?=$i?>" <?=($i == $defaultColumnsCount) ? 'selected=selected' : ''?>><?=$i?></option>
