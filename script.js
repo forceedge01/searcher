@@ -12,6 +12,11 @@ $(document).ready(function() {
 		'imdb:': 'http://www.imdb.com/find?ref_=nv_sr_fn&q={term}&s=all'
 	};
 
+	jQuery('section').hide();
+	jQuery('section#panel iframe').hide();
+	jQuery('section#search').show();
+	jQuery('section#panel iframe').first().show();
+
 	setTimeout(function() {
 		$('input')[0].focus();
 	}, 1000);
@@ -56,4 +61,15 @@ $(document).ready(function() {
 		    }
 		}
      });
+
+	jQuery('.open').click(function() {
+		jQuery('section').hide();
+		jQuery('section#'+jQuery(this).attr('id')).fadeIn();
+	});
+
+	jQuery('#tab a').click(function() {
+		jQuery('section#panel iframe').hide();
+		var id = jQuery(this).text().replace(' ', '-').toLowerCase();
+		jQuery('#'+id).fadeIn();
+	});
 });
