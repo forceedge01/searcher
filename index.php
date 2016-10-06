@@ -16,7 +16,7 @@
     ];
 
     $external = [
-        'eBay' => 'https://ebay.co.uk',
+        'eBay' => 'http://my.ebay.co.uk/ws/eBayISAPI.dll?MyEbay&gbh=1&CurrentPage=MyeBayAllSelling&ssPageName=STRK:ME:LNLK:MESX',
         'Amazon' => 'https://amazon.co.uk',
         'Hotmail' => 'https://hotmail.com',
         'easyFundraising' => 'https://easyfundraising.org.uk',
